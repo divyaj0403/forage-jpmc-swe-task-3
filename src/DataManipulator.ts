@@ -12,7 +12,7 @@ export interface Row {
 
 
 export class DataManipulator {
-  static generateRow(serverResponds: ServerRespond[]):Row {
+  static generateRow(serverResponds: serverRespond[]):Row {
     const priceABC=(serverRespond[0].top_ask.price+serverRespond[0].top_bid.price)/2;
     const priceDEF=(serverResponds[1].top_ask.price+serverResponds[1].top_bid.price)/2;
     const ratio=priceABC/priceDEF;
